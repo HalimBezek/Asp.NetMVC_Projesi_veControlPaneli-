@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "DoğuşSoft | İletişim";
+}
+
+
+<div class="main-container">
+
+
+
+    <section class="text-center imagebg space--md" data-overlay="7">
+        <div class="background-image-holder">
+            <img alt="DogusSoft iletisim" src="~/Content/img/iletisim1.jpg" />
+        </div>
+        <div class="container">
+            <div class="row">
+                
+            </div>
+        </div>
+    </section>
+    <div class="text-block bg-primary" role="alert" align="center">
+      @ViewBag.Bilgi
+    </div>
+    <div class="tabs-container text-center" data-content-align="left">
+        <div class="tab__content">
+            <section class="space--xs imageblock switchable bg--secondary" style="background-color:white; padding-bottom: 0em; padding-top: 0em">
+                <form action="/home/Contact" method="post">
+                    <div class="container" id="TryTrialTitleSection">
+                        <div class="row">
+                            <h2> İletişim Formu </h2>
+
+                            <div class="col-md-6">
+
+                                <input type="text" name="adi" class="validate-required" placeholder="Adınız">
+                                <input type="text" name="soyadi" class="validate-required" placeholder="Soyadınız">
+                                <input type="text" name="SirketBilgileri" class="validate-required" placeholder="Şirket bilgileriniz">
+
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="Email" class="validate-required" placeholder="E-mailiniz">
+                                <input type="text" name="Tel" class="validate-required" placeholder="Telefonunuz">
+                                <input type="text" name="adres" class="validate-required" placeholder="Adresiniz">
+
+                            </div>
+
+                        </div><br />
+                        <input type="text" style="height:80px" name="mesaj_icerigi" class="validate-required" placeholder="Eklemek istedikleriniz">
+                    </div>
+                    <div class="container">
+                        <div class="row" align="center">
+
+                            <button type="submit" class="btn btn-success" style="width:200px;margin-top:30px">FORMU GÖNDER</button>
+
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+      <section class="switchable ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-7 col-xs-12">
+                    <!--map konum-->
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=key1'></script><div style='overflow:hidden;height:400px;width:520px;'><div id='gmap_canvas' style='height:400px;width:520px;'></div>
+                    <style>
+                        #gmap_canvas img {
+                            max-width: none !important;
+                            background: none !important;
+                        }
+                    </style></div> 
+                    <script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(41.0555625,28.809687499999995),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(41.0555625,28.809687499999995)});infowindow = new google.maps.InfoWindow({content:'<strong>Doğus Soft</strong><br>3R45+6V Berrak Sokak no:54, Mehmet Akif Mah., Küçükçekmece/İstanbul<br> İstanbul<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                    <!--map konum-->
+                </div>
+                <div class="col-md-6 col-sm-5">
+                    <div class="switchable__text">
+                        Email:
+
+
+                        <h3>
+                            Basın Ekspress Yan Yolu Mehmet Akif Mah. Berrak Sokak No:54 <br />
+                            <strong>Küçükçekmece / İstanbul</strong>
+
+                        </h3>
+                        <p class="lead">
+                            Email:
+                            <a href="mailto:info@guvensoft.com.tr">Mail: info@guvensoft.com.tr</a>
+                            <br />
+                            Tel: 0850 303 75 10
+                        </p>
+                        <p class="lead">
+                            Bizi  09:00 - 19:00 Saatleri arasında dilediğiniz zaman arayabilirsiniz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+
+    
+   
+</div>

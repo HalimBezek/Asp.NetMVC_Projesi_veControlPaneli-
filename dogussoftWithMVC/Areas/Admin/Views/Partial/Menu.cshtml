@@ -1,0 +1,24 @@
+﻿<nav class="navbar-default navbar-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="main-menu" style="background-color:#30639e">
+
+            <li class=@ViewBag.stil>
+                <a href="/admin/home" style="color:@ViewBag.colorstil"><i class="fa fa-desktop "></i>Ana Sayfa </a>
+            </li>
+
+            <li class=@ViewBag.stildemo>
+                <a href="/admin/demorequest" style="color:@ViewBag.colorstildemo"><i class="fa fa-clipboard "></i>Demo İsteği <span class="badge"> +@ViewBag.demoSayi</span></a>
+            </li>
+
+
+            <li class=@ViewBag.stilmesaj>
+                <a href="/admin/message" style="color:@ViewBag.colorstilmesaj"><i class="fa fa-mail-forward "></i> Mesajlar <span class="badge">+@ViewBag.mesajSayi  </span></a>
+            </li>
+
+        </ul>
+
+
+    </div>
+    
+
+</nav>

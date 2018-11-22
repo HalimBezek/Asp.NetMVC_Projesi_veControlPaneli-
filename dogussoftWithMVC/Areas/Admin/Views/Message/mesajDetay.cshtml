@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "Admin | Mesaj Detayı";
+
+    dogussoftWithMVC.Models.IletisimBigileri bilgiler = (dogussoftWithMVC.Models.IletisimBigileri)ViewBag.mesajBilgileriDetay;
+}
+<div id="page-wrapper">
+    <div id="page-inner">
+        
+        <h3>Mesaj Detayı : @bilgiler.adi @bilgiler.soyadi </h3>
+
+       @{ var routeValue = new RouteValueDictionary();
+           routeValue.Add("ID", bilgiler.Id);
+           routeValue.Add("cevapNot", bilgiler.cevapNotu);
+
+           using (Html.BeginForm("Index", "Message", routeValue)) //admin/message/ındex?ıd=1 değerini post olarak gonderir.
+           {
+
+
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Adı : </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => bilgiler.adi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => bilgiler.adi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Soyadı : </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => bilgiler.soyadi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => bilgiler.soyadi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Email : </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => bilgiler.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => bilgiler.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Şirket Bilgileri : </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => bilgiler.SirketBilgileri, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => bilgiler.SirketBilgileri, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Telefon Numarası : </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => bilgiler.Tel, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => bilgiler.Tel, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Adres : </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => bilgiler.adres, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => bilgiler.adres, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Mesaj içeriği : </div>
+                    <div class="col-md-10">
+                        <textarea class="form-control" aria-label="With textarea">@bilgiler.mesaj_icerigi</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Talep Tarihi : </div>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => bilgiler.TalepTarihi, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => bilgiler.TalepTarihi, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2" align="right">Cevap verildi mi ? : </div>
+                    <div class="col-md-10">
+                        @if (bilgiler.cevapVerildi)
+                        {
+                            <input type="checkbox" checked id="cevapla" readonly style="pointer-events: none;" />
+                            <div id="cevapNotu" class="form-group">
+                                <div class="col-md-2" align="right">Cevap Notu : </div>
+                                <div class="col-md-10">
+                                    <textarea name="cevapNot" class="form-control" aria-label="With textarea">@bilgiler.cevapNotu</textarea>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <input type="checkbox"  id="cevapla"/> 
+                        } 
+
+
+                        <p hidden class="bg-warning">değişiklikleri kaydetmek için Kaydet ve Listeye Dön butonuyla devam edin.</p>
+                    </div>
+                </div>   
+                
+                <div hidden id="cevapNotu" class="form-group">
+                    <div class="col-md-2" align="right">Cevap Notu : </div>
+                    <div class="col-md-10">
+                        <textarea name="cevapNot" class="form-control" aria-label="With textarea">@bilgiler.cevapNotu</textarea>
+                    </div>
+                </div>
+                            
+                @if (bilgiler.cevapVerildi)
+                {
+                    <div class="form-group">
+                        <div class="col-md-2" align="right">Cevap Tarihi : </div>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => bilgiler.CevapTarihi, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => bilgiler.CevapTarihi, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group">
+                        <div class="col-md-2" align="right">Cevap Tarihi : </div>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" value="---" />
+                        </div>
+                    </div>
+                }
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-4">
+                        <a href="/Admin/Message" class="btn btn-primary"> Listeye Dön </a>
+                    </div>
+                    <div hidden id="kaydetDevamet"  class="col-md-offset-2 col-md-4">
+                        <button type="submit" class="btn btn-primary">Kaydet ve Listeye Dön </button>
+                    </div>
+                </div>
+            </div>
+        }  
+             }
+     </div>
+</div>

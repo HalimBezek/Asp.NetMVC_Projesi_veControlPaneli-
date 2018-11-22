@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>@ViewBag.Title</title>
+   
+    <meta name="description" content="Site Description Here">
+    <link href="/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Content/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+       .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+            background-color:cornflowerblue;
+        }
+    </style>
+    
+</head>
+<body>
+    <!--end bar-->
+    <!--end of notification-->
+    <div class="nav-container ">
+        <div class="bar bar--sm visible-xs collapse">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-1">
+                        <a href="/home/index">
+                            <img src="~/Content/img/dslogo.jpg" />
+                        </a>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 text-right">
+                        <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs">
+                            <i class="icon icon--sm stack-interface stack-menu"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </div>
+        <!--end bar logo:<p style="color:cornflowerblue;font-size:22px">DoğuşSoft</p>-->
+
+    </div>
+    <nav id="menu1" class="navbar nav-container bg--secondary" style="margin-bottom:0px;border-radius:0px">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12 col-sm-12">
+                    <div class="col-md-2 col-sm-3">
+                        <div class="bar__module ">
+                            <a href="/home/index">
+
+                                <img src="~/Content/img/dslogo.jpg" />
+
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-10 col-sm-10" align="right"  style="padding-top:15px" >
+                        <!---->
+
+                        <div class="bar__module" >
+                            <ul class="menu-horizontal text-left">
+
+                                <li class="dropdown">
+                                    <a  class="btn btn--primary-1" style="color:white" href="/home/aboutus">HAKKIMIZDA </a>
+                                    <div class="dropdown__container">
+
+                                    </div>
+
+                                <li class="dropdown">
+                                    <a  style="color:white" class="btn btn--primary-1 dropdown-toggle" data-toggle="dropdown">ÜRÜNLERİMİZ<span class="caret"></span></a>
+                                    <ul class="dropdown-menu bar--dark" aling="left" style="background-color:#31639c">
+                                        <li><a href="/enterpraces/ecommerce" style="color:#fff">E-TİCARET PAKETLERİ</a></li>
+                                        <li><a href="/home/services" style="color:#fff">360 DF</a></li>
+                                 
+                                    </ul>
+                                </li>
+                               
+
+                                <!-- <li class="dropdown">
+                                      <a href="/home/services">HİZMETLERİMİZ</a>
+                                      <div class="dropdown-content">
+
+                                      </div>
+                                  </li>
+
+                                <li class="dropdown">
+                                    <a  class="btn btn--primary-1" style="color:white" href="/home/SolutionPartner">ÇÖZÜM ORTAKLARIMIZ</a>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+
+                                        </div>
+                                    </div>
+                                </li>-->
+
+
+                                <li class="dropdown">
+                                    <a  class="btn btn--primary-1" style="color:white" href="/home/Referances">REFERANSLARIMIZ</a>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+
+                                            <!--end row drapdown item <i class="fa fa-caret-down"></i>-->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="btn btn--primary-1" style="color:white" href="/home/Contact">İLETİŞİM</a>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a class="btn btn-primary" href="/home/Contact"
+                                       style="color:white">
+                                    HEMEN ARAYIN</a>
+                                    <div class="dropdown__container">
+                                        <div class="container">
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <!--end module-->
+                    
+                    <!--end module-->
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </nav>
+    <!--end bar-->
+
+
+
+    @RenderBody();
+
+        <footer class="space--xs footer-2 bg--dark" style="padding:0;padding-top:3px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 col-xs-6">
+                        <h4>Adres Bilgileri</h4>
+                        <ul class="list--hover">
+                            <li>
+                                <a><i class="icon icon--xs icon-Office"></i>  Basın Ekspress Yan Yolu Mehmet Akif Mah. Berrak Sokak No:54 Küçükçekmece / İstanbul</a>
+                            </li>
+                            <li>
+                                <a><i class="icon icon--xs icon-Phone"></i> 0850 303 75 10 </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@dogussoft.com"><i class="icon icon--xs icon-Mail"></i> info@dogussoft.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-6">
+                            <h5>ÜRÜNLERİMİZ</h5>
+                            <ul class="list--hover">
+                                <li>
+                                    <a href="/enterpraces/ecommerce">- E-Ticaret Paketleri</a>                                    
+                                </li>
+                                <li>                                    
+                                    <a href="/home/services">- 360 Df</a>
+                                </li>
+
+                            </ul>
+
+                        <h5><a href="/home/SolutionPartner">ÇÖZÜM ORTAKLARIMIZ</a></h5>
+                        <h5><a href="/home/Referances">REFERANSLARIMIZ</a></h5>
+                        <h5><a href="/home/Contact">İLETİŞİM</a></h5>
+
+
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-xs-6">
+                        <h4>Biz Kimiz</h4>
+                        <ul class="list--hover">
+                            <li>
+                                <a href="/home/AboutUs">Hakkımızda</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 " align="center">
+                    <ul class="social-list list-inline list--hover">
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-google icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-twitter icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-facebook icon icon--xs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="socicon socicon-instagram icon icon--xs"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            &nbsp; <span class="type--fine-print">
+                                &copy;
+                                <span class="update-year"></span> Doğuş Soft Her Hakkı Saklıdır.
+                            </span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="stack-interface stack-up-open-big"></i>
+        </a>
+
+        <script src="/Content/js/jquery-3.1.1.min.js"></script>
+        <script src="/Content/js/flickity.min.js"></script>
+        <script src="/Content/js/easypiechart.min.js"></script>
+        <script src="/Content/js/parallax.js"></script>
+        <script src="/Content/js/typed.min.js"></script>
+        <script src="/Content/js/datepicker.js"></script>
+        <script src="/Content/js/isotope.min.js"></script>
+        <script src="/Content/js/ytplayer.min.js"></script>
+        <script src="/Content/js/lightbox.min.js"></script>
+        <script src="/Content/js/granim.min.js"></script>
+        <script src="/Content/js/jquery.steps.min.js"></script>
+        <script src="/Content/js/countdown.min.js"></script>
+        <script src="/Content/js/twitterfetcher.min.js"></script>
+        <script src="/Content/js/spectragram.min.js"></script>
+        <script src="/Content/js/smooth-scroll.min.js"></script>
+        <script src="/Content/js/scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa0X2YHRndjJmw1rFB82NhRbjYRU1_lU" type="text/javascript"></script>
+</body>
+</html>

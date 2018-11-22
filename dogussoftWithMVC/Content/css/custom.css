@@ -1,0 +1,10 @@
+/*! Place your custom styles here */
+
+.field-validation-error {
+    color: #e23030;
+}
+
+
+.min-height-240{
+    min-height:240px;
+}

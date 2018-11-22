@@ -1,0 +1,1442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31595837-1076-4DF2-91E6-7C3566A3B3C5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dogussoftWithMVC</RootNamespace>
+    <AssemblyName>dogussoftWithMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\assets\css\animate-custom.css" />
+    <Content Include="Areas\Admin\assets\css\bootstrap.css" />
+    <Content Include="Areas\Admin\assets\css\custom.css" />
+    <Content Include="Areas\Admin\assets\css\demo.css" />
+    <Content Include="Areas\Admin\assets\css\font-awesome.css" />
+    <Content Include="Areas\Admin\assets\css\style.css" />
+    <Content Include="Areas\Admin\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\assets\images\bg.jpg" />
+    <Content Include="Areas\Admin\assets\images\ImageAttribution.txt" />
+    <Content Include="Areas\Admin\assets\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\assets\js\custom.js" />
+    <Content Include="Areas\Admin\assets\js\jquery-1.10.2.js" />
+    <Content Include="Content\css\admincss\bootstrap.css" />
+    <Content Include="Content\css\admincss\custom.css" />
+    <Content Include="Content\css\admincss\font-awesome.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\flickity.css" />
+    <Content Include="Content\css\font-frankruhl-firasans.css" />
+    <Content Include="Content\css\font-karla.css" />
+    <Content Include="Content\css\font-merriweather-ptsans.css" />
+    <Content Include="Content\css\font-raleway.css" />
+    <Content Include="Content\css\font-roboto.css" />
+    <Content Include="Content\css\font-robotoslab.css" />
+    <Content Include="Content\css\font-rubiklato.css" />
+    <Content Include="Content\css\font-sourcesanspro.css" />
+    <Content Include="Content\css\iconsmind.css" />
+    <Content Include="Content\css\msgBoxLight.css" />
+    <Content Include="Content\css\jquery.steps.css" />
+    <Content Include="Content\css\lightbox.min.css" />
+    <Content Include="Content\css\socicon.css" />
+    <Content Include="Content\css\stack-interface.css" />
+    <Content Include="Content\css\theme-aqua.css" />
+    <Content Include="Content\css\theme-cedar.css" />
+    <Content Include="Content\css\theme-charcoal.css" />
+    <Content Include="Content\css\theme-greensea.css" />
+    <Content Include="Content\css\theme-red.css" />
+    <Content Include="Content\css\theme-rtl.css" />
+    <Content Include="Content\css\theme-serpent.css" />
+    <Content Include="Content\css\theme-tangerine.css" />
+    <Content Include="Content\css\theme-yeller.css" />
+    <Content Include="Content\css\theme.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\socicon.svg" />
+    <Content Include="Content\fonts\stack-interface.svg" />
+    <Content Include="Content\img\1.jpg" />
+    <Content Include="Content\img\360dfpageBanner.jpg" />
+    <Content Include="Content\img\360dfSayfasi1.jpg" />
+    <Content Include="Content\img\360dfSayfasi3.jpg" />
+    <Content Include="Content\img\agency-4.jpg" />
+    <Content Include="Content\img\art-1.jpg" />
+    <Content Include="Content\img\art-2.jpg" />
+    <Content Include="Content\img\art-3.jpg" />
+    <Content Include="Content\img\art-4.jpg" />
+    <Content Include="Content\img\avatar-group.jpg" />
+    <Content Include="Content\img\avatar-large-1.png" />
+    <Content Include="Content\img\avatar-large-2.png" />
+    <Content Include="Content\img\b2bphoto.png" />
+    <Content Include="Content\img\b2bphoto_2.jpg" />
+    <Content Include="Content\img\B2Bphoto_3.jpg" />
+    <Content Include="Content\img\b2bphoto_4.jpg" />
+    <Content Include="Content\img\BANNER4.jpg" />
+    <Content Include="Content\img\BANNER5 - Copy.jpg" />
+    <Content Include="Content\img\BANNER5.jpg" />
+    <Content Include="Content\img\banner6.jpg" />
+    <Content Include="Content\img\biz-sizi-arayalim.jpg" />
+    <Content Include="Content\img\blog-5.jpg" />
+    <Content Include="Content\img\blog-6.jpg" />
+    <Content Include="Content\img\blog-7.jpg" />
+    <Content Include="Content\img\BNNER.jpg" />
+    <Content Include="Content\img\banner01.jpg" />
+    <Content Include="Content\img\banner02.jpg" />
+    <Content Include="Content\img\banner360Slider.jpg" />
+    <Content Include="Content\img\conference-2.jpg" />
+    <Content Include="Content\img\construction-1.jpg" />
+    <Content Include="Content\img\construction-2.jpg" />
+    <Content Include="Content\img\cowork-1.jpg" />
+    <Content Include="Content\img\cowork-10.jpg" />
+    <Content Include="Content\img\cowork-11.jpg" />
+    <Content Include="Content\img\cowork-2.jpg" />
+    <Content Include="Content\img\cowork-3.jpg" />
+    <Content Include="Content\img\cowork-4.jpg" />
+    <Content Include="Content\img\cowork-5.jpg" />
+    <Content Include="Content\img\cowork-6.jpg" />
+    <Content Include="Content\img\cowork-7.jpg" />
+    <Content Include="Content\img\cowork-8.jpg" />
+    <Content Include="Content\img\cowork-9.jpg" />
+    <Content Include="Content\img\360dfbannerr.jpg" />
+    <Content Include="Content\img\device-2.png" />
+    <Content Include="Content\img\device-3.png" />
+    <Content Include="Content\img\device-4.png" />
+    <Content Include="Content\img\device-5.png" />
+    <Content Include="Content\img\device-6.png" />
+    <Content Include="Content\img\device-7.png" />
+    <Content Include="Content\img\device-8.png" />
+    <Content Include="Content\img\device-bg-1.jpg" />
+    <Content Include="Content\img\df360logo.png" />
+    <Content Include="Content\img\dogussistem-seo-slider.jpg" />
+    <Content Include="Content\img\false.png" />
+    <Content Include="Content\img\true.png" />
+    <Content Include="Content\img\drone-2.jpg" />
+    <Content Include="Content\img\dropdown-1.jpg" />
+    <Content Include="Content\img\dropdown-2.jpg" />
+    <Content Include="Content\img\dslogo.jpg" />
+    <Content Include="Content\img\ebook-2.png" />
+    <Content Include="Content\img\education-1.jpg" />
+    <Content Include="Content\img\education-2.jpg" />
+    <Content Include="Content\img\education-3.jpg" />
+    <Content Include="Content\img\education-6.jpg" />
+    <Content Include="Content\img\erp.jpg" />
+    <Content Include="Content\img\erpfoto.png" />
+    <Content Include="Content\img\ERPImage.jpg" />
+    <Content Include="Content\img\ERPImage.png" />
+    <Content Include="Content\img\erpphoto.jpg" />
+    <Content Include="Content\img\erpphoto_2.jpg" />
+    <Content Include="Content\img\erpphoto_3.jpg" />
+    <Content Include="Content\img\eticaret-2.png" />
+    <Content Include="Content\img\eticaret-responsive.png" />
+    <Content Include="Content\img\eticaret-slider.jpg" />
+    <Content Include="Content\img\eticaret.png" />
+    <Content Include="Content\img\first-click-seo.jpg" />
+    <Content Include="Content\img\fitness-1.jpg" />
+    <Content Include="Content\img\fitness-5.jpg" />
+    <Content Include="Content\img\gallery-1.jpg" />
+    <Content Include="Content\img\google-seo.jpg" />
+    <Content Include="Content\img\HAKKIMIZDA.jpg" />
+    <Content Include="Content\img\hakkımızda1.jpg" />
+    <Content Include="Content\img\hero-1 - Kopya.jpg" />
+    <Content Include="Content\img\hero-1.jpg" />
+    <Content Include="Content\img\hero-2.jpg" />
+    <Content Include="Content\img\icerikyonetim.jpg" />
+    <Content Include="Content\img\iletisim.jpg" />
+    <Content Include="Content\img\image2.png" />
+    <Content Include="Content\img\image3.png" />
+    <Content Include="Content\img\image4.png" />
+    <Content Include="Content\img\images.png" />
+    <Content Include="Content\img\inner-2.jpg" />
+    <Content Include="Content\img\inner-3.jpg" />
+    <Content Include="Content\img\inner-5.jpg" />
+    <Content Include="Content\img\inner-6.jpg" />
+    <Content Include="Content\img\inner-7.jpg" />
+    <Content Include="Content\img\inner-8.jpg" />
+    <Content Include="Content\img\insurance-3.jpg" />
+    <Content Include="Content\img\knowledge-1.jpg" />
+    <Content Include="Content\img\landing-1.jpg" />
+    <Content Include="Content\img\landing-10.jpg" />
+    <Content Include="Content\img\landing-16.jpg" />
+    <Content Include="Content\img\landing-18.jpg" />
+    <Content Include="Content\img\landing-19.jpg" />
+    <Content Include="Content\img\landing-22-1.jpg" />
+    <Content Include="Content\img\landing-22-2.jpg" />
+    <Content Include="Content\img\landing-22.jpg" />
+    <Content Include="Content\img\landing-23.jpg" />
+    <Content Include="Content\img\landing-25.jpg" />
+    <Content Include="Content\img\landing-26.jpg" />
+    <Content Include="Content\img\landing-4.jpg" />
+    <Content Include="Content\img\landing-5.jpg" />
+    <Content Include="Content\img\landing-7.jpg" />
+    <Content Include="Content\img\landing-8.jpg" />
+    <Content Include="Content\img\landing-9.jpg" />
+    <Content Include="Content\img\LOGO1.png" />
+    <Content Include="Content\img\LOGOKURUMSAL.png" />
+    <Content Include="Content\img\random-feat.png" />
+    <Content Include="Content\img\slider1.jpg" />
+    <Content Include="Content\img\slider1-6.jpg" />
+    <Content Include="Content\img\slider1-3.jpg" />
+    <Content Include="Content\img\slider1-4.jpg" />
+    <Content Include="Content\img\logo-agency.png" />
+    <Content Include="Content\img\logo-light-dogus.PNG" />
+    <Content Include="Content\img\logo-light.png" />
+    <Content Include="Content\img\logo-musician.png" />
+    <Content Include="Content\img\logo-variant.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\logo2.png" />
+    <Content Include="Content\img\main_image.png" />
+    <Content Include="Content\img\main_image1.jpg" />
+    <Content Include="Content\img\mapmarker.png" />
+    <Content Include="Content\img\menu-promo-3.jpg" />
+    <Content Include="Content\img\mobil2.jpg" />
+    <Content Include="Content\img\mobil3.jpg" />
+    <Content Include="Content\img\mobilbanner.jpg" />
+    <Content Include="Content\img\mobilbanner10.jpg" />
+    <Content Include="Content\img\mobilbanner13.png" />
+    <Content Include="Content\img\mobilbanner14.png" />
+    <Content Include="Content\img\mobilbanner2.jpg" />
+    <Content Include="Content\img\mobilbanner3.jpg" />
+    <Content Include="Content\img\mobilbanner4.png" />
+    <Content Include="Content\img\mobilbanner5.jpg" />
+    <Content Include="Content\img\mobilbanner6.png" />
+    <Content Include="Content\img\mobilbanner7.jpg" />
+    <Content Include="Content\img\mobilbanner8.fw.png" />
+    <Content Include="Content\img\mobilbanner8.jpg" />
+    <Content Include="Content\img\mobilbanner8.png" />
+    <Content Include="Content\img\mobile1.jpg" />
+    <Content Include="Content\img\music-2.jpg" />
+    <Content Include="Content\img\music-3.jpg" />
+    <Content Include="Content\img\nav-bar-2.jpg" />
+    <Content Include="Content\img\nav-bar.jpg" />
+    <Content Include="Content\img\nav-fullscreen.jpg" />
+    <Content Include="Content\img\nav-sidebar.jpg" />
+    <Content Include="Content\img\nonprofit-6.jpg" />
+    <Content Include="Content\img\ozelyazilimlar.jpg" />
+    <Content Include="Content\img\partner-2.png" />
+    <Content Include="Content\img\partner-3.png" />
+    <Content Include="Content\img\partner-4.png" />
+    <Content Include="Content\img\partner-5.png" />
+    <Content Include="Content\img\partner-6.png" />
+    <Content Include="Content\img\partner-7.png" />
+    <Content Include="Content\img\personal-1.jpg" />
+    <Content Include="Content\img\photography-1.jpg" />
+    <Content Include="Content\img\photography-10.jpg" />
+    <Content Include="Content\img\photography-12.jpg" />
+    <Content Include="Content\img\photography-2.jpg" />
+    <Content Include="Content\img\photography-3.jpg" />
+    <Content Include="Content\img\photography-4.jpg" />
+    <Content Include="Content\img\photography-5.jpg" />
+    <Content Include="Content\img\photography-6.jpg" />
+    <Content Include="Content\img\photography-7.jpg" />
+    <Content Include="Content\img\photography-8.jpg" />
+    <Content Include="Content\img\photography-9.jpg" />
+    <Content Include="Content\img\photography-logo-1.png" />
+    <Content Include="Content\img\political-1.jpg" />
+    <Content Include="Content\img\political-2.jpg" />
+    <Content Include="Content\img\product-single-1.jpg" />
+    <Content Include="Content\img\product-single-large-1.jpg" />
+    <Content Include="Content\img\product-single-large-2.jpg" />
+    <Content Include="Content\img\product-small-1.jpg" />
+    <Content Include="Content\img\product-small-1.png" />
+    <Content Include="Content\img\product-small-10.png" />
+    <Content Include="Content\img\product-small-11.png" />
+    <Content Include="Content\img\product-small-12.png" />
+    <Content Include="Content\img\product-small-2.png" />
+    <Content Include="Content\img\product-small-3.jpg" />
+    <Content Include="Content\img\product-small-3.png" />
+    <Content Include="Content\img\product-small-4.png" />
+    <Content Include="Content\img\product-small-5.jpg" />
+    <Content Include="Content\img\product-small-5.png" />
+    <Content Include="Content\img\product-small-6.jpg" />
+    <Content Include="Content\img\product-small-6.png" />
+    <Content Include="Content\img\product-small-7.jpg" />
+    <Content Include="Content\img\product-small-7.png" />
+    <Content Include="Content\img\product-small-8.png" />
+    <Content Include="Content\img\product-small-9.png" />
+    <Content Include="Content\img\product-small-feature-1.jpg" />
+    <Content Include="Content\img\promo-1.jpg" />
+    <Content Include="Content\img\recruitment-1.jpg" />
+    <Content Include="Content\img\recruitment-2.jpg" />
+    <Content Include="Content\img\recruitment-3.jpg" />
+    <Content Include="Content\img\recruitment-4.jpg" />
+    <Content Include="Content\img\referans.PNG" />
+    <Content Include="Content\img\referanslar.jpg" />
+    <Content Include="Content\img\slider-1-1.jpg" />
+    <Content Include="Content\img\slider1-1.jpg" />
+    <Content Include="Content\img\software-1.jpg" />
+    <Content Include="Content\img\software-2.jpg" />
+    <Content Include="Content\img\software-3.jpg" />
+    <Content Include="Content\img\software-4.jpg" />
+    <Content Include="Content\img\software-5.jpg" />
+    <Content Include="Content\img\tasarim-secekleri.jpg" />
+    <Content Include="Content\img\tasarim-secekleri.png" />
+    <Content Include="Content\img\tourism-1.jpg" />
+    <Content Include="Content\img\tourism-2.jpg" />
+    <Content Include="Content\img\tourism-3.jpg" />
+    <Content Include="Content\img\tourism-4.jpg" />
+    <Content Include="Content\img\tourism-5.jpg" />
+    <Content Include="Content\img\tourism-6.jpg" />
+    <Content Include="Content\img\tourism-7.jpg" />
+    <Content Include="Content\img\tourism-8.jpg" />
+    <Content Include="Content\img\tourism-9.jpg" />
+    <Content Include="Content\img\wedding-1.jpg" />
+    <Content Include="Content\img\wedding-2.jpg" />
+    <Content Include="Content\img\wedding-3.jpg" />
+    <Content Include="Content\img\wedding-4.jpg" />
+    <Content Include="Content\img\wedding-5.jpg" />
+    <Content Include="Content\img\work-1.jpg" />
+    <Content Include="Content\img\work-2.jpg" />
+    <Content Include="Content\img\work-3.jpg" />
+    <Content Include="Content\img\work-4.jpg" />
+    <Content Include="Content\img\work-5.jpg" />
+    <Content Include="Content\img\work-6.jpg" />
+    <Content Include="Content\img\work-single-1.jpg" />
+    <Content Include="Content\img\work-single-2.jpg" />
+    <Content Include="Content\img\work-single-3.jpg" />
+    <Content Include="Content\img\work-single-4.jpg" />
+    <Content Include="Content\img\work.jpg" />
+    <Content Include="Content\img\YAZILIM.jpg" />
+    <Content Include="Content\img\YAZILIM1.jpg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\countdown.min.js" />
+    <Content Include="Content\js\custom.js" />
+    <Content Include="Content\js\datepicker.js" />
+    <Content Include="Content\js\easypiechart.min.js" />
+    <Content Include="Content\js\flickity.min.js" />
+    <Content Include="Content\js\granim.min.js" />
+    <Content Include="Content\js\isotope.min.js" />
+    <Content Include="Content\js\jquery-1.10.2.js" />
+    <Content Include="Content\js\jquery-3.1.1.min.js" />
+    <Content Include="Content\js\jquery.flexslider-min.js" />
+    <Content Include="Content\js\jquery.steps.min.js" />
+    <Content Include="Content\js\lightbox.min.js" />
+    <Content Include="Content\js\parallax.js" />
+    <Content Include="Content\js\scripts.js" />
+    <Content Include="Content\js\smooth-scroll.min.js" />
+    <Content Include="Content\js\spectragram.min.js" />
+    <Content Include="Content\js\twitterfetcher.min.js" />
+    <Content Include="Content\js\typed.min.js" />
+    <Content Include="Content\js\ytplayer.min.js" />
+    <Content Include="Content\mail\foot.html" />
+    <Content Include="Content\mail\head.html" />
+    <Content Include="Content\mail\index.html" />
+    <Content Include="Content\partners\banka\1.png" />
+    <Content Include="Content\partners\banka\10.png" />
+    <Content Include="Content\partners\banka\11.png" />
+    <Content Include="Content\partners\banka\12.png" />
+    <Content Include="Content\partners\banka\13.png" />
+    <Content Include="Content\partners\banka\14.png" />
+    <Content Include="Content\partners\banka\15.png" />
+    <Content Include="Content\partners\banka\16.png" />
+    <Content Include="Content\partners\banka\2.png" />
+    <Content Include="Content\partners\banka\3.png" />
+    <Content Include="Content\partners\banka\4.png" />
+    <Content Include="Content\partners\banka\5.png" />
+    <Content Include="Content\partners\banka\6.png" />
+    <Content Include="Content\partners\banka\7.png" />
+    <Content Include="Content\partners\banka\8.png" />
+    <Content Include="Content\partners\banka\9.png" />
+    <Content Include="Content\partners\fiyatkarsilastirma\akakce-logo.png" />
+    <Content Include="Content\partners\fiyatkarsilastirma\alve-logo.png" />
+    <Content Include="Content\partners\fiyatkarsilastirma\cimri-logo.png" />
+    <Content Include="Content\partners\kargo\aras-logo.png" />
+    <Content Include="Content\partners\kargo\mng-logo.png" />
+    <Content Include="Content\partners\kargo\surat-logo.png" />
+    <Content Include="Content\partners\kargo\ups-logo.png" />
+    <Content Include="Content\partners\kargo\yurtici-logo.png" />
+    <Content Include="Content\partners\odeme\ipara-logo.png" />
+    <Content Include="Content\partners\odeme\iyzico-logo.png" />
+    <Content Include="Content\partners\odeme\paypal-logo.png" />
+    <Content Include="Content\partners\odeme\paytr-logo.png" />
+    <Content Include="Content\partners\odeme\payu-logo.png" />
+    <Content Include="Content\partners\pazaryeri\gittigidiyor-logo.jpg" />
+    <Content Include="Content\partners\pazaryeri\hepsiburada-logo.jpg" />
+    <Content Include="Content\partners\pazaryeri\n11-logo.jpg" />
+    <Content Include="Content\partners\teknoloji\android-logo.png" />
+    <Content Include="Content\partners\teknoloji\ios-logo.png" />
+    <Content Include="Content\partners\teknoloji\java-logo.jpg" />
+    <Content Include="Content\partners\teknoloji\microsoft-logo.jpg" />
+    <Content Include="Content\partners\teknoloji\oracle-logo.jpg" />
+    <Content Include="Content\partners\teknoloji\windows-logo.png" />
+    <Content Include="Content\partners\ticari\goplus-logo.jpg" />
+    <Content Include="Content\partners\ticari\mikro-logo.jpg" />
+    <Content Include="Content\partners\ticari\nebim-logo.jpg" />
+    <Content Include="Content\partners\ticari\netsis-logo.jpg" />
+    <Content Include="Content\referances\cansuyalcin.jpg" />
+    <Content Include="Content\referances\deriji.JPG" />
+    <Content Include="Content\referances\fethiyeoludenizyamacparasutu.jpg" />
+    <Content Include="Content\referances\fethiyeoludenizyamacparasutu1.jpg" />
+    <Content Include="Content\referances\fethiyeoludenizyamacparasutu2.jpg" />
+    <Content Include="Content\referances\irmakpvcyapi.jpg" />
+    <Content Include="Content\referances\kamerakurdu.jpg" />
+    <Content Include="Content\referances\keyiftaksi.jpg" />
+    <Content Include="Content\referances\kizilyarinsaat.JPG" />
+    <Content Include="Content\referances\oludenizyamacparasutu.JPG" />
+    <Content Include="Content\referances\themillionscafe.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\variant\builder.html" />
+    <Content Include="Content\variant\css\mediumEditor.css" />
+    <Content Include="Content\variant\css\normalize.css" />
+    <Content Include="Content\variant\css\style.css" />
+    <Content Include="Content\variant\css\variant-icons.css" />
+    <Content Include="Content\variant\css\variant-social-icons.css" />
+    <Content Include="Content\variant\fonts\variant-icons.svg" />
+    <Content Include="Content\variant\fonts\variant-social.svg" />
+    <Content Include="Content\variant\img\checkerboard.png" />
+    <Content Include="Content\variant\img\flickr.png" />
+    <Content Include="Content\variant\img\fonts\karla.png" />
+    <Content Include="Content\variant\img\fonts\lato.png" />
+    <Content Include="Content\variant\img\fonts\lora.png" />
+    <Content Include="Content\variant\img\fonts\montserrat.png" />
+    <Content Include="Content\variant\img\fonts\muli.png" />
+    <Content Include="Content\variant\img\fonts\opensans.png" />
+    <Content Include="Content\variant\img\fonts\poppins.png" />
+    <Content Include="Content\variant\img\fonts\raleway.png" />
+    <Content Include="Content\variant\img\fonts\roboto.png" />
+    <Content Include="Content\variant\img\fonts\robotoslab.png" />
+    <Content Include="Content\variant\img\fonts\rubik.png" />
+    <Content Include="Content\variant\img\fonts\sourcesanspro.png" />
+    <Content Include="Content\variant\img\full-logo.png" />
+    <Content Include="Content\variant\img\instagram.png" />
+    <Content Include="Content\variant\img\mailchimp-cmonitor.png" />
+    <Content Include="Content\variant\img\mrare-colours.png" />
+    <Content Include="Content\variant\img\mrare.png" />
+    <Content Include="Content\variant\img\new.png" />
+    <Content Include="Content\variant\img\requires-maps-api-key.png" />
+    <Content Include="Content\variant\img\sections\variant-accordion-image-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-image-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-image-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-image-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-map-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-map-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-map-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-map-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-slider-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-slider-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-slider-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-slider-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-video-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-video-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-video-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-accordion-video-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-account-create-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-account-create-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-account-login-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-account-login-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-account-recover.jpg" />
+    <Content Include="Content\variant\img\sections\variant-blog-article-audio.jpg" />
+    <Content Include="Content\variant\img\sections\variant-blog-article-image.jpg" />
+    <Content Include="Content\variant\img\sections\variant-blog-article-simple.jpg" />
+    <Content Include="Content\variant\img\sections\variant-blog-comments.jpg" />
+    <Content Include="Content\variant\img\sections\variant-blog-list-simple.jpg" />
+    <Content Include="Content\variant\img\sections\variant-blog-recent-stories.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cards-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cards-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-carousel-logo.jpg" />
+    <Content Include="Content\variant\img\sections\variant-carousel-portfolio-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-carousel-portfolio-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-carousel-products-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-countdown-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-countdown-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-features-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-features-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-form-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-form-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-form-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-form-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-gradient-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-gradient-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-image-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-image-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-image-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-image-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-image-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-slider-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-text-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-text-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-text-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-text-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-text-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-video-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-video-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-video-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-video-4-local.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-video-4-youtube.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-video-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cover-video-6.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-avatar-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-avatar-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-avatar-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-button.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-2-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-3-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-centered-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-2-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-3-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-cta-horizontal-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-error-500.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-10.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-11.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-12.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-13.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-14.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-6.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-7.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-8.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-large-9.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-10.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-11-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-11.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-12-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-12.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-13-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-13.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-14-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-14.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-4-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-5-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-6-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-6.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-7.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-8.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-9-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-features-small-9.jpg" />
+    <Content Include="Content\variant\img\sections\variant-form-simple-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-form-simple-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-form-with-map-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-form-with-map-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-form-with-text-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-form-with-text-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-form-with-text-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-lightbox.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-products-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-projects-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-projects-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-projects-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-projects-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-projects-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-gallery-video-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-in-page-navigator.jpg" />
+    <Content Include="Content\variant\img\sections\variant-instagram-feed-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-instagram-feed-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-instagram-feed-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-instagram-feed-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-instagram-feed-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-api-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-api-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-api-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-api-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-iframe-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-iframe-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-iframe-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-map-iframe-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-page-title-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-page-title-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-page-title-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-page-title-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-page-title-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-page-title-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-planner-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-planner-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-planner-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-planner-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-planner-2-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-planner-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-5-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-feature-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-4-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-pricing-plans-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-4-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-5-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-5.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-radial-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-radial-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-process-stepper-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-product-simple.jpg" />
+    <Content Include="Content\variant\img\sections\variant-section-title-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-section-title-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-signup-detailed-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-signup-detailed-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-signup-feature-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-signup-feature-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-signup-horizontal-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-signup-horizontal-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-signup-horizontal-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-sigunup-horizontal-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-sigunup-horizontal-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-sigunup-horizontal-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-slider-images-lightbox.jpg" />
+    <Content Include="Content\variant\img\sections\variant-slider-images.jpg" />
+    <Content Include="Content\variant\img\sections\variant-slider-ken-burns.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-boxed-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-boxed-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-boxed-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-boxed-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-boxed-2-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-boxed-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-elaborate-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-2-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-3-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-4-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-4-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-horizontal-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-image-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-image-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-image-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-2-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-3-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-title-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-twitter-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-twitter-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-twitter-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-subscribe-video-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-horizontal-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-horizontal-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-horiztonal-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-images-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-vertical-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-vertical-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-vertical-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-vertical-3 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-tabs-vertical-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-team-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-team-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-team-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-team-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-team-single - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-team-single.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-1-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-2-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-avatar-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-partners-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-partners-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-1-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-2-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-testimonial-slider-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-1-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-2-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-3 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-3-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-4 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-4-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-4-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-text-layout-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-1-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-1-gradient - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-2-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-2-gradient - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-2-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-feed-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-slider-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-slider-1-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-slider-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-slider-1-gradient - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-slider-1-gradient.jpg" />
+    <Content Include="Content\variant\img\sections\variant-twitter-slider-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-1-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-2-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-2-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-3 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-4 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-4-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-4-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-inline-4.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-1 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-1-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-1-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-1.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-2 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-2.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-3 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-3-bg - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-3-bg.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-3.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-4 - Kopya.jpg" />
+    <Content Include="Content\variant\img\sections\variant-video-modal-4.jpg" />
+    <Content Include="Content\variant\img\variant-features-1.png" />
+    <Content Include="Content\variant\img\variant-features-2.png" />
+    <Content Include="Content\variant\img\variant-features-3.png" />
+    <Content Include="Content\variant\img\variant.png" />
+    <Content Include="Content\variant\img\vlogo.png" />
+    <Content Include="Content\variant\img\youtube-vimeo.png" />
+    <Content Include="Content\variant\js - Kopya\alterClass.js" />
+    <Content Include="Content\variant\js - Kopya\he.js" />
+    <Content Include="Content\variant\js - Kopya\htmlBeautify.js" />
+    <Content Include="Content\variant\js - Kopya\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Content\variant\js - Kopya\jquery.js" />
+    <Content Include="Content\variant\js - Kopya\jsZip.js" />
+    <Content Include="Content\variant\js - Kopya\mediumEditor.min.js" />
+    <Content Include="Content\variant\js - Kopya\saveAs.js" />
+    <Content Include="Content\variant\js - Kopya\simpleModal.js" />
+    <Content Include="Content\variant\js - Kopya\storage2.js" />
+    <Content Include="Content\variant\js - Kopya\underscore.min.js" />
+    <Content Include="Content\variant\js - Kopya\variant.js" />
+    <Content Include="Content\variant\js\alterClass.js" />
+    <Content Include="Content\variant\js\he.js" />
+    <Content Include="Content\variant\js\htmlBeautify.js" />
+    <Content Include="Content\variant\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Content\variant\js\jquery.js" />
+    <Content Include="Content\variant\js\jsZip.js" />
+    <Content Include="Content\variant\js\mediumEditor.min.js" />
+    <Content Include="Content\variant\js\saveAs.js" />
+    <Content Include="Content\variant\js\simpleModal.js" />
+    <Content Include="Content\variant\js\storage2.js" />
+    <Content Include="Content\variant\js\underscore.min.js" />
+    <Content Include="Content\variant\js\variant.js" />
+    <Content Include="Content\variant\licenses - Kopya\LICENSES.txt" />
+    <Content Include="Content\variant\licenses\LICENSES.txt" />
+    <Content Include="Content\variant\theme - Kopya\css\bootstrap.css" />
+    <Content Include="Content\variant\theme - Kopya\css\custom.css" />
+    <Content Include="Content\variant\theme - Kopya\css\flickity.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-frankruhl-firasans.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-karla.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-merriweather-ptsans.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-raleway.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-roboto.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-robotoslab.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-rubiklato.css" />
+    <Content Include="Content\variant\theme - Kopya\css\font-sourcesanspro.css" />
+    <Content Include="Content\variant\theme - Kopya\css\iconsmind.css" />
+    <Content Include="Content\variant\theme - Kopya\css\jquery.steps.css" />
+    <Content Include="Content\variant\theme - Kopya\css\lightbox.min.css" />
+    <Content Include="Content\variant\theme - Kopya\css\socicon.css" />
+    <Content Include="Content\variant\theme - Kopya\css\stack-interface.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-aqua.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-cedar.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-charcoal.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-greensea.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-red.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-rtl.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-serpent.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-tangerine.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme-yeller.css" />
+    <Content Include="Content\variant\theme - Kopya\css\theme.css" />
+    <Content Include="Content\variant\theme - Kopya\fonts\demo-asset-iconsmind.svg" />
+    <Content Include="Content\variant\theme - Kopya\fonts\socicon.svg" />
+    <Content Include="Content\variant\theme - Kopya\fonts\stack-interface.svg" />
+    <Content Include="Content\variant\theme - Kopya\img\lightbox\close.png" />
+    <Content Include="Content\variant\theme - Kopya\img\lightbox\loading.gif" />
+    <Content Include="Content\variant\theme - Kopya\img\lightbox\next.png" />
+    <Content Include="Content\variant\theme - Kopya\img\lightbox\prev.png" />
+    <Content Include="Content\variant\theme - Kopya\js\countdown.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\datepicker.js" />
+    <Content Include="Content\variant\theme - Kopya\js\easypiechart.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\flickity.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\granim.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\isotope.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\jquery-3.1.1.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\jquery.steps.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\lightbox.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\parallax.js" />
+    <Content Include="Content\variant\theme - Kopya\js\scripts.js" />
+    <Content Include="Content\variant\theme - Kopya\js\smooth-scroll.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\spectragram.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\twitterfetcher.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\typed.min.js" />
+    <Content Include="Content\variant\theme - Kopya\js\ytplayer.min.js" />
+    <Content Include="Content\variant\theme\css\bootstrap.css" />
+    <Content Include="Content\variant\theme\css\custom.css" />
+    <Content Include="Content\variant\theme\css\flickity.css" />
+    <Content Include="Content\variant\theme\css\font-frankruhl-firasans.css" />
+    <Content Include="Content\variant\theme\css\font-karla.css" />
+    <Content Include="Content\variant\theme\css\font-merriweather-ptsans.css" />
+    <Content Include="Content\variant\theme\css\font-raleway.css" />
+    <Content Include="Content\variant\theme\css\font-roboto.css" />
+    <Content Include="Content\variant\theme\css\font-robotoslab.css" />
+    <Content Include="Content\variant\theme\css\font-rubiklato.css" />
+    <Content Include="Content\variant\theme\css\font-sourcesanspro.css" />
+    <Content Include="Content\variant\theme\css\iconsmind.css" />
+    <Content Include="Content\variant\theme\css\jquery.steps.css" />
+    <Content Include="Content\variant\theme\css\lightbox.min.css" />
+    <Content Include="Content\variant\theme\css\socicon.css" />
+    <Content Include="Content\variant\theme\css\stack-interface.css" />
+    <Content Include="Content\variant\theme\css\theme-aqua.css" />
+    <Content Include="Content\variant\theme\css\theme-cedar.css" />
+    <Content Include="Content\variant\theme\css\theme-charcoal.css" />
+    <Content Include="Content\variant\theme\css\theme-greensea.css" />
+    <Content Include="Content\variant\theme\css\theme-red.css" />
+    <Content Include="Content\variant\theme\css\theme-rtl.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="Content\fonts\iconsmind.eot" />
+    <Content Include="Content\fonts\iconsmind.ttf" />
+    <Content Include="Content\fonts\iconsmind.woff" />
+    <Content Include="Content\fonts\socicon.eot" />
+    <Content Include="Content\fonts\socicon.ttf" />
+    <Content Include="Content\fonts\socicon.woff" />
+    <Content Include="Content\fonts\stack-interface.eot" />
+    <Content Include="Content\fonts\stack-interface.ttf" />
+    <Content Include="Content\fonts\stack-interface.woff" />
+    <Content Include="Content\fonts\stack-interface.woff2" />
+    <Content Include="Content\less\framework_components\accordions.less" />
+    <Content Include="Content\less\framework_components\alerts.less" />
+    <Content Include="Content\less\framework_components\bars.less" />
+    <Content Include="Content\less\framework_components\boxed-layout.less" />
+    <Content Include="Content\less\framework_components\boxes.less" />
+    <Content Include="Content\less\framework_components\breadcrumbs.less" />
+    <Content Include="Content\less\framework_components\buttons.less" />
+    <Content Include="Content\less\framework_components\colors.less" />
+    <Content Include="Content\less\framework_components\dropdowns.less" />
+    <Content Include="Content\less\framework_components\flickity.less" />
+    <Content Include="Content\less\framework_components\forms-v2.less" />
+    <Content Include="Content\less\framework_components\granim.less" />
+    <Content Include="Content\less\framework_components\helpers.less" />
+    <Content Include="Content\less\framework_components\hover-elements.less" />
+    <Content Include="Content\less\framework_components\icons.less" />
+    <Content Include="Content\less\framework_components\image-blocks.less" />
+    <Content Include="Content\less\framework_components\images.less" />
+    <Content Include="Content\less\framework_components\lightbox-images.less" />
+    <Content Include="Content\less\framework_components\lists.less" />
+    <Content Include="Content\less\framework_components\maps.less" />
+    <Content Include="Content\less\framework_components\masonry.less" />
+    <Content Include="Content\less\framework_components\menus.less" />
+    <Content Include="Content\less\framework_components\mixins.less" />
+    <Content Include="Content\less\framework_components\modals.less" />
+    <Content Include="Content\less\framework_components\navigation-inpage.less" />
+    <Content Include="Content\less\framework_components\newsletter-providers.less" />
+    <Content Include="Content\less\framework_components\notifications.less" />
+    <Content Include="Content\less\framework_components\parallax.less" />
+    <Content Include="Content\less\framework_components\position.less" />
+    <Content Include="Content\less\framework_components\progress-horizontal.less" />
+    <Content Include="Content\less\framework_components\radials.less" />
+    <Content Include="Content\less\framework_components\reset.less" />
+    <Content Include="Content\less\framework_components\size.less" />
+    <Content Include="Content\less\framework_components\spacing.less" />
+    <Content Include="Content\less\framework_components\switchable.less" />
+    <Content Include="Content\less\framework_components\tabs.less" />
+    <Content Include="Content\less\framework_components\transitions.less" />
+    <Content Include="Content\less\framework_components\twitter.less" />
+    <Content Include="Content\less\framework_components\typed-effect.less" />
+    <Content Include="Content\less\framework_components\typography.less" />
+    <Content Include="Content\less\framework_components\variables.less" />
+    <Content Include="Content\less\framework_components\video.less" />
+    <Content Include="Content\less\framework_components\wizard.less" />
+    <Content Include="Content\less\theme-overrides.less" />
+    <Content Include="Content\less\theme-variables.less" />
+    <Content Include="Content\less\theme.less" />
+    <Content Include="Content\less\theme_components\accordions.less" />
+    <Content Include="Content\less\theme_components\alerts.less" />
+    <Content Include="Content\less\theme_components\animations.less" />
+    <Content Include="Content\less\theme_components\bars.less" />
+    <Content Include="Content\less\theme_components\blog.less" />
+    <Content Include="Content\less\theme_components\boxes.less" />
+    <Content Include="Content\less\theme_components\buttons.less" />
+    <Content Include="Content\less\theme_components\cards.less" />
+    <Content Include="Content\less\theme_components\checkmarks.less" />
+    <Content Include="Content\less\theme_components\colors.less" />
+    <Content Include="Content\less\theme_components\covers.less" />
+    <Content Include="Content\less\theme_components\cta.less" />
+    <Content Include="Content\less\theme_components\customizers.less" />
+    <Content Include="Content\less\theme_components\dropdowns.less" />
+    <Content Include="Content\less\theme_components\features-large.less" />
+    <Content Include="Content\less\theme_components\features-small.less" />
+    <Content Include="Content\less\theme_components\footers.less" />
+    <Content Include="Content\less\theme_components\forms.less" />
+    <Content Include="Content\less\theme_components\helpers.less" />
+    <Content Include="Content\less\theme_components\icons.less" />
+    <Content Include="Content\less\theme_components\images.less" />
+    <Content Include="Content\less\theme_components\instagram.less" />
+    <Content Include="Content\less\theme_components\labels.less" />
+    <Content Include="Content\less\theme_components\lightbox.less" />
+    <Content Include="Content\less\theme_components\links.less" />
+    <Content Include="Content\less\theme_components\lists.less" />
+    <Content Include="Content\less\theme_components\loader.less" />
+    <Content Include="Content\less\theme_components\maps.less" />
+    <Content Include="Content\less\theme_components\masonry.less" />
+    <Content Include="Content\less\theme_components\modals.less" />
+    <Content Include="Content\less\theme_components\navigation-fullscreen.less" />
+    <Content Include="Content\less\theme_components\navigation-menu-toggle.less" />
+    <Content Include="Content\less\theme_components\navigation-sidebar-column.less" />
+    <Content Include="Content\less\theme_components\navigation-sidebar.less" />
+    <Content Include="Content\less\theme_components\navigation-stacked.less" />
+    <Content Include="Content\less\theme_components\navigation-utility.less" />
+    <Content Include="Content\less\theme_components\navigation.less" />
+    <Content Include="Content\less\theme_components\notifications.less" />
+    <Content Include="Content\less\theme_components\portfolio.less" />
+    <Content Include="Content\less\theme_components\pricing.less" />
+    <Content Include="Content\less\theme_components\processes.less" />
+    <Content Include="Content\less\theme_components\progress-horizontal.less" />
+    <Content Include="Content\less\theme_components\radials.less" />
+    <Content Include="Content\less\theme_components\rules.less" />
+    <Content Include="Content\less\theme_components\sections.less" />
+    <Content Include="Content\less\theme_components\shop.less" />
+    <Content Include="Content\less\theme_components\sliders.less" />
+    <Content Include="Content\less\theme_components\switchable.less" />
+    <Content Include="Content\less\theme_components\tables.less" />
+    <Content Include="Content\less\theme_components\tabs.less" />
+    <Content Include="Content\less\theme_components\testimonials.less" />
+    <Content Include="Content\less\theme_components\titles.less" />
+    <Content Include="Content\less\theme_components\tooltips.less" />
+    <Content Include="Content\less\theme_components\twitter.less" />
+    <Content Include="Content\less\theme_components\typed-text.less" />
+    <Content Include="Content\less\theme_components\typography.less" />
+    <Content Include="Content\less\theme_components\videos.less" />
+    <Content Include="Content\less\theme_components\wizard.less" />
+    <Content Include="Content\mail\lib\classes\Swift.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Attachment.php" />
+    <Content Include="Content\mail\lib\classes\Swift\ByteStream\AbstractFilterableInputStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\ByteStream\ArrayByteStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\ByteStream\FileByteStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\ByteStream\TemporaryFileByteStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterReader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterReaderFactory.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterReaderFactory\SimpleCharacterReaderFactory.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterReader\GenericFixedWidthReader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterReader\UsAsciiReader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterReader\Utf8Reader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterStream\ArrayCharacterStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\CharacterStream\NgCharacterStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\ConfigurableSpool.php" />
+    <Content Include="Content\mail\lib\classes\Swift\DependencyContainer.php" />
+    <Content Include="Content\mail\lib\classes\Swift\DependencyException.php" />
+    <Content Include="Content\mail\lib\classes\Swift\EmbeddedFile.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Encoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Encoder\Base64Encoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Encoder\QpEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Encoder\Rfc2231Encoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Encoding.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\CommandEvent.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\CommandListener.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\Event.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\EventDispatcher.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\EventListener.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\EventObject.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\ResponseEvent.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\ResponseListener.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\SendEvent.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\SendListener.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\SimpleEventDispatcher.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\TransportChangeEvent.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\TransportChangeListener.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\TransportExceptionEvent.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Events\TransportExceptionListener.php" />
+    <Content Include="Content\mail\lib\classes\Swift\FailoverTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\FileSpool.php" />
+    <Content Include="Content\mail\lib\classes\Swift\FileStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Filterable.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Image.php" />
+    <Content Include="Content\mail\lib\classes\Swift\InputByteStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\IoException.php" />
+    <Content Include="Content\mail\lib\classes\Swift\KeyCache.php" />
+    <Content Include="Content\mail\lib\classes\Swift\KeyCache\ArrayKeyCache.php" />
+    <Content Include="Content\mail\lib\classes\Swift\KeyCache\DiskKeyCache.php" />
+    <Content Include="Content\mail\lib\classes\Swift\KeyCache\KeyCacheInputStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\KeyCache\NullKeyCache.php" />
+    <Content Include="Content\mail\lib\classes\Swift\KeyCache\SimpleKeyCacheInputStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\LoadBalancedTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mailer.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mailer\ArrayRecipientIterator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mailer\RecipientIterator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\MailTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\MemorySpool.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Message.php" />
+    <Content Include="Content\mail\lib\classes\Swift\MimePart.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Attachment.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\CharsetObserver.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ContentEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ContentEncoder\Base64ContentEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ContentEncoder\NativeQpContentEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ContentEncoder\PlainContentEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ContentEncoder\QpContentEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ContentEncoder\QpContentEncoderProxy.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ContentEncoder\RawContentEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\EmbeddedFile.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\EncodingObserver.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Grammar.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Header.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\HeaderEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\HeaderEncoder\Base64HeaderEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\HeaderEncoder\QpHeaderEncoder.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\HeaderFactory.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\HeaderSet.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\AbstractHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\DateHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\IdentificationHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\MailboxHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\OpenDKIMHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\ParameterizedHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\PathHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Headers\UnstructuredHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\Message.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\MimeEntity.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\MimePart.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\ParameterizedHeader.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\SimpleHeaderFactory.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\SimpleHeaderSet.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\SimpleMessage.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Mime\SimpleMimeEntity.php" />
+    <Content Include="Content\mail\lib\classes\Swift\NullTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\OutputByteStream.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\AntiFloodPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\BandwidthMonitorPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\DecoratorPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Decorator\Replacements.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\ImpersonatePlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Logger.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\LoggerPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Loggers\ArrayLogger.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Loggers\EchoLogger.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\MessageLogger.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\PopBeforeSmtpPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Pop\Pop3Connection.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Pop\Pop3Exception.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\RedirectingPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Reporter.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\ReporterPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Reporters\HitReporter.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Reporters\HtmlReporter.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Sleeper.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\ThrottlerPlugin.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Plugins\Timer.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Preferences.php" />
+    <Content Include="Content\mail\lib\classes\Swift\ReplacementFilterFactory.php" />
+    <Content Include="Content\mail\lib\classes\Swift\RfcComplianceException.php" />
+    <Content Include="Content\mail\lib\classes\Swift\SendmailTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\SignedMessage.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Signer.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Signers\BodySigner.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Signers\DKIMSigner.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Signers\DomainKeySigner.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Signers\HeaderSigner.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Signers\OpenDKIMSigner.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Signers\SMimeSigner.php" />
+    <Content Include="Content\mail\lib\classes\Swift\SmtpTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Spool.php" />
+    <Content Include="Content\mail\lib\classes\Swift\SpoolTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\StreamFilter.php" />
+    <Content Include="Content\mail\lib\classes\Swift\StreamFilters\ByteArrayReplacementFilter.php" />
+    <Content Include="Content\mail\lib\classes\Swift\StreamFilters\StringReplacementFilter.php" />
+    <Content Include="Content\mail\lib\classes\Swift\StreamFilters\StringReplacementFilterFactory.php" />
+    <Content Include="Content\mail\lib\classes\Swift\SwiftException.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\TransportException.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\AbstractSmtpTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\EsmtpHandler.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\EsmtpTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\Esmtp\Authenticator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\Esmtp\AuthHandler.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\Esmtp\Auth\CramMd5Authenticator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\Esmtp\Auth\LoginAuthenticator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\Esmtp\Auth\NTLMAuthenticator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\Esmtp\Auth\PlainAuthenticator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\Esmtp\Auth\XOAuth2Authenticator.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\FailoverTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\IoBuffer.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\LoadBalancedTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\MailInvoker.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\MailTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\NullTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\SendmailTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\SimpleMailInvoker.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\SmtpAgent.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\SpoolTransport.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Transport\StreamBuffer.php" />
+    <Content Include="Content\mail\lib\classes\Swift\Validate.php" />
+    <Content Include="Content\mail\lib\dependency_maps\cache_deps.php" />
+    <Content Include="Content\mail\lib\dependency_maps\message_deps.php" />
+    <Content Include="Content\mail\lib\dependency_maps\mime_deps.php" />
+    <Content Include="Content\mail\lib\dependency_maps\transport_deps.php" />
+    <Content Include="Content\mail\lib\mail_sender.php" />
+    <Content Include="Content\mail\lib\mime_types.php" />
+    <Content Include="Content\mail\lib\preferences.php" />
+    <Content Include="Content\mail\lib\swiftmailer_generate_mimes_config.php" />
+    <Content Include="Content\mail\lib\swift_init.php" />
+    <Content Include="Content\mail\lib\swift_required.php" />
+    <Content Include="Content\mail\lib\swift_required_pear.php" />
+    <Content Include="Content\mail\mail.php" />
+    <Content Include="Content\variant\fonts\variant-icons.eot" />
+    <Content Include="Content\variant\fonts\variant-icons.otf" />
+    <Content Include="Content\variant\fonts\variant-icons.ttf" />
+    <Content Include="Content\variant\fonts\variant-icons.woff" />
+    <Content Include="Content\variant\fonts\variant-social.eot" />
+    <Content Include="Content\variant\fonts\variant-social.ttf" />
+    <Content Include="Content\variant\fonts\variant-social.woff" />
+    <Content Include="Content\variant\theme - Kopya\fonts\demo-asset-iconsmind.eot" />
+    <Content Include="Content\variant\theme - Kopya\fonts\demo-asset-iconsmind.ttf" />
+    <Content Include="Content\variant\theme - Kopya\fonts\demo-asset-iconsmind.woff" />
+    <Content Include="Content\variant\theme - Kopya\fonts\iconsmind.eot" />
+    <Content Include="Content\variant\theme - Kopya\fonts\iconsmind.ttf" />
+    <Content Include="Content\variant\theme - Kopya\fonts\iconsmind.woff" />
+    <Content Include="Content\variant\theme - Kopya\fonts\socicon.eot" />
+    <Content Include="Content\variant\theme - Kopya\fonts\socicon.ttf" />
+    <Content Include="Content\variant\theme - Kopya\fonts\socicon.woff" />
+    <Content Include="Content\variant\theme - Kopya\fonts\stack-interface.eot" />
+    <Content Include="Content\variant\theme - Kopya\fonts\stack-interface.ttf" />
+    <Content Include="Content\variant\theme - Kopya\fonts\stack-interface.woff" />
+    <Content Include="Content\variant\theme - Kopya\fonts\stack-interface.woff2" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Areas\Admin\Views\DemoRequest\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\mesajDetay.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DemoRequest\requestDetay.cshtml" />
+    <Content Include="Areas\Admin\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\assets\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Areas\Admin\Views\Giris\giris.cshtml" />
+    <Content Include="Areas\Admin\Views\Partial\Menu.cshtml" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery.msgBox.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Referances.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Home\SolutionPartner.cshtml" />
+    <Content Include="Views\Enterpraces\businesstobusiness.cshtml" />
+    <Content Include="Views\Enterpraces\cms.cshtml" />
+    <Content Include="Views\Enterpraces\crm.cshtml" />
+    <Content Include="Views\Enterpraces\corporate.cshtml" />
+    <Content Include="Views\Enterpraces\customsoftware.cshtml" />
+    <Content Include="Views\Enterpraces\ecommerce.cshtml" />
+    <Content Include="Views\Enterpraces\erp.cshtml" />
+    <Content Include="Views\Enterpraces\mobileapp.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Attribute\GirisKontrol.cs" />
+    <Compile Include="Areas\Admin\Controllers\CountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DemoRequestController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GirisController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MessageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PartialController.cs" />
+    <Compile Include="Controllers\EnterpracesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\demoBilgiler.cs" />
+    <Compile Include="Models\DBaseContext.cs" />
+    <Compile Include="Models\IletisimBigileri.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\assets\css\fonts\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Count\" />
+    <Folder Include="Content\img\demos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53930</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53930/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
